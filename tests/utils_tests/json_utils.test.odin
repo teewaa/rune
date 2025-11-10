@@ -2,10 +2,8 @@
 package utils_tests
 
 import "core:testing"
-
 import "tests:mocks"
 import "rune:utils"
-
 
 @(test)
 should_read_root_file_correctly :: proc(t: ^testing.T) {

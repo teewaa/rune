@@ -1,3 +1,5 @@
+package utils
+
 /*
     List of predefined variables
 
@@ -6,14 +8,10 @@
     profile:    Name of the profile
 */
 
-package utils
-
 import "core:fmt"
 import filepath "core:path/filepath"
 import "core:strings"
-
 import "rune:logger"
-
 
 // BuildData defines the structure for holding build-related information like entry, output, flags, and architecture.
 BuildData :: struct {

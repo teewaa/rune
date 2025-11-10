@@ -6,7 +6,6 @@ import "tests:mocks"
 import "rune:cmds"
 import "rune:utils"
 
-
 @(test)
 should_process_tests :: proc(t: ^testing.T) {
     sys := utils.System {

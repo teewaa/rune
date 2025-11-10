@@ -1,7 +1,6 @@
 package cmds_tests
 
 import "core:testing"
-
 import "tests:mocks"
 import "rune:cmds"
 import "rune:utils"

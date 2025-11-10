@@ -3,7 +3,6 @@ package utils
 import "base:runtime"
 import "core:os/os2"
 
-
 System :: struct {
     fs:         FileSystem,
     process:    Process,

@@ -2,7 +2,6 @@ package mocks
 
 import "core:os/os2"
 
-
 mock_pipe_ok :: proc() -> (r, w: ^os2.File, err: os2.Error) {
     return {}, {}, nil
 }

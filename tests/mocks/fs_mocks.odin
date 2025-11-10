@@ -4,11 +4,7 @@ package mocks
 import "base:runtime"
 import "core:os/os2"
 import "core:encoding/json"
-
 import "rune:utils"
-
-
-err_msg := "MOCK_ERROR"
 
 mock_make_directory_no_err :: proc(name: string, perm: int = 0o755) -> os2.Error {
     return nil

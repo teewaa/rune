@@ -1,10 +1,8 @@
 package utils_tests
 
 import "core:testing"
-
 import "tests:mocks"
 import "rune:utils"
-
 
 @(test)
 process_valid_script :: proc(t: ^testing.T) {

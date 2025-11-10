@@ -2,9 +2,7 @@ package utils_tests
 
 import "core:fmt"
 import "core:testing"
-
 import "rune:utils"
-
 
 @(test)
 return_windows_platforms :: proc(t: ^testing.T) {

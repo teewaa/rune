@@ -3,7 +3,6 @@ package utils
 import "core:fmt"
 import "core:strings"
 
-
 // Retrieves the profile with the specified name from the schema.
 //
 // Parameters:

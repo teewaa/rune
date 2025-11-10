@@ -2,9 +2,7 @@ package cmds
 
 import "core:fmt"
 import "core:strings"
-
 import "rune:utils"
-
 
 // process_script handles the `rune [script]` command.
 //

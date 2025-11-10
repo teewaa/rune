@@ -4,9 +4,7 @@ import "core:fmt"
 import "core:strings"
 import "core:os/os2"
 import "core:thread"
-
 import "rune:logger"
-
 
 T_Data :: struct {
     out_r: ^os2.File,

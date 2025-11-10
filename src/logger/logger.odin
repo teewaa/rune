@@ -2,7 +2,6 @@ package logger
 
 import "core:fmt"
 
-
 // ANSI escape codes for terminal text color formatting
 @(private="file")
 RESET  := "\033[0m"   // Reset the text formatting

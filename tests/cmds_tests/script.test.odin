@@ -2,11 +2,9 @@
 package cmds_tests
 
 import "core:testing"
-
 import "tests:mocks"
 import "rune:cmds"
 import "rune:utils"
-
 
 @(test)
 should_process_valid_script :: proc(t: ^testing.T) {

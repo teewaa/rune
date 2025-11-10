@@ -1,9 +1,7 @@
 package utils
 
 import "core:fmt"
-
 import "rune:logger"
-
 
 // Enum containing the different platforms
 Platform :: enum {

@@ -2,11 +2,9 @@
 package cmds_tests
 
 import "core:testing"
-
 import "tests:mocks"
 import "rune:cmds"
 import "rune:utils"
-
 
 @(test)
 should_build_default :: proc(t: ^testing.T) {
