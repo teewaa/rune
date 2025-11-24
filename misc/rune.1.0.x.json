@@ -2,33 +2,17 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "properties": {
-        "configs": {
-            "properties": {
-                "target": {
-                    "type": "string",
-                    "description": "Name of the build target"
-                },
-                "profile": {
-                    "type": "string",
-                    "description": "Default profile to use"
-                },
-                "test_profile": {
-                    "type": "string",
-                    "description": "Default test profile to use"
-                },
-                "output": {
-                    "type": "string",
-                    "description": "Output directory"
-                },
-                "test_output": {
-                    "type": "string",
-                    "description": "Output directory"
-                }
-            },
-            "required": [
-                "target",
-                "output"
-            ]
+        "version": {
+            "type": "string",
+            "description": "Version of the project. Leave empty if you don't want to assign a version"
+        },
+        "default_profile": {
+            "type": "string",
+            "description": "Default profile to build when running `rune build`"
+        },
+        "default_test_profile": {
+            "type": "string",
+            "description": "Default test profile to use when running `rune test`"
         },
         "profiles": {
             "type": "array",
@@ -38,6 +22,14 @@
                     "name": {
                         "type": "string",
                         "description": "Name of the profile"
+                    },
+                    "target": {
+                        "type": "string",
+                        "description": "Name of the build target"
+                    },
+                    "output": {
+                        "type": "string",
+                        "description": "Output directory"
                     },
                     "build_mode": {
                         "type": "string",
@@ -114,7 +106,8 @@
                                 "description": "Series of scripts to run",
                                 "items": {
                                     "type": "string",
-                                    "description": "Name of the script to reference"
+                                    "description": "Name of the script to reference",
+                                    "pattern": "^\\S+$"
                                 }
                             },
                             "copy": {
@@ -149,7 +142,8 @@
                                 "description": "Series of scripts to run",
                                 "items": {
                                     "type": "string",
-                                    "description": "Name of the script to reference"
+                                    "description": "Name of the script to reference",
+                                    "pattern": "^\\S+$"
                                 }
                             },
                             "copy": {
@@ -185,11 +179,19 @@
         },
         "scripts": {
             "type": "object",
+            "patternProperties": {
+                "^[^\\s]+$": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
             "description": "Series of scripts defines as \"name\": [command]'"
+            
         }
     },
     "required": [
-        "configs",
-        "profiles"
+        "default_profile",
+        "profiles",
+        "version"
     ]
 }

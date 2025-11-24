@@ -1,7 +1,8 @@
 {
-	"$schema": "../misc/rune.0.5.x.json",
+	"$schema": "../misc/rune.1.0.x.json",
 	"default_profile": "default",
 	"default_test_profile": "test_default",
+	"version": "1.0.0",
 	"profiles": [
 		{
 			"name": "default",
@@ -20,7 +21,8 @@
 			},
 			"post_build": {
 				"copy": [
-					{ "from": "assets", "to": "assets" }
+					{ "from": "assets", "to": "assets" },
+					{  "from": "assets/test.txt", "to": "test.txt"}
 				],
 				"scripts": [
 					"print_after"

@@ -1,8 +1,20 @@
 {
-    "$schema": "./misc/rune.0.5.x.json",
-    "default_profile": "release",
-    "default_test_profile": "test_default",
+    "$schema": "./misc/rune.1.0.x.json",
+    "version": "1.0.0",
+    "default_profile": "debug",
     "profiles": [
+        {
+            "name": "debug",
+            "target": "rune",
+            "output": "bin/{config}/{arch}",
+            "arch": "windows_amd64",
+            "entry": "src",
+            "build_mode": "exe",
+            "build_flags": [
+                "-vet",
+                "-debug"
+            ]
+        },
         {
             "name": "release",
             "target": "rune",
@@ -11,8 +23,7 @@
             "entry": "src",
             "build_mode": "exe",
             "build_flags": [
-                "-vet",
-                "-collection:rune=src/"
+                "-vet"
             ]
         },
         {
@@ -23,8 +34,7 @@
             "entry": "src",
             "build_mode": "exe",
             "build_flags": [
-                "-vet",
-                "-collection:rune=src/"
+                "-vet"
             ]
         },
         {
@@ -35,56 +45,7 @@
             "entry": "src",
             "build_mode": "exe",
             "build_flags": [
-                "-vet",
-                "-collection:rune=src/"
-            ]
-        },
-        {
-            "name": "test_default",
-            "target": "test_run",
-            "output": "bin/tests/{arch}",
-            "arch": "windows_amd64",
-            "entry": "tests",
-            "build_flags": [
-                "-vet",
-                "--all-packages",
-                "-define:ODIN_TEST_THREADS=1",
-                "-define:ODIN_TEST_PROGRESS_WIDTH=0",
-                "-warnings-as-errors",
-                "-collection:rune=src/",
-                "-collection:tests=tests/"
-            ]
-        },
-        {
-            "name": "test_linux",
-            "target": "test_run",
-            "output": "bin/tests/{arch}",
-            "arch": "linux_amd64",
-            "entry": "tests",
-            "build_flags": [
-                "-vet",
-                "--all-packages",
-                "-define:ODIN_TEST_THREADS=1",
-                "-define:ODIN_TEST_PROGRESS_WIDTH=0",
-                "-warnings-as-errors",
-                "-collection:rune=src/",
-                "-collection:tests=tests/"
-            ]
-        },
-        {
-            "name": "test_macos",
-            "target": "test_run",
-            "output": "bin/tests/{arch}",
-            "arch": "darwin_arm64",
-            "entry": "tests",
-            "build_flags": [
-                "-vet",
-                "--all-packages",
-                "-define:ODIN_TEST_THREADS=1",
-                "-define:ODIN_TEST_PROGRESS_WIDTH=0",
-                "-warnings-as-errors",
-                "-collection:rune=src/",
-                "-collection:tests=tests/"
+                "-vet"
             ]
         }
     ],

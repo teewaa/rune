@@ -16,4 +16,4 @@ if not exist "bin" (
 
 rem Run the build
 echo Building Rune version %VERSION%
-odin build "src" -out:"bin/rune.exe" -collection:rune=src/ -define:VERSION=%VERSION%
+odin build "src" -out:"bin/rune.exe" -debug -collection:rune=src/ -define:VERSION=%VERSION%

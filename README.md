@@ -34,7 +34,7 @@ Once you have the source code, run the follow command to build the project in yo
 **Help**
 
 ```txt
-rune - A build profile tool for the Odin programming language
+rune - A build tool for the Odin programming language
 
 Usage:
   rune command> [options]
@@ -72,7 +72,7 @@ Project files:
   rune.json                       Defines profiles, default profile, and scripts for the project.
 
 Examples:
-  rune new release bin/app        Create a rune.json with a 'release' profile targeting bin/app
+  rune new exe -o:app             Create a rune.json file with an executable called app
   rune test                       Run tests using the default profile
   rune run                        Run the executable using the default profile
 ```
